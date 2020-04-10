@@ -38,10 +38,13 @@ class Queue {
   }
 
   all() {
-    while(this.first !== null){
-      return this.first.value;
-      this.first = this.first.next;
+    let arr = [];
+    let currNode = this.first;
+    while(currNode !== null){
+      arr.push(currNode.value);
+      currNode = currNode.next;
     }
+    return arr;
   }
 }
 

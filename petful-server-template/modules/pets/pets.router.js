@@ -23,7 +23,7 @@ router.delete('/cats', json, (req, res) => {
 
 router.delete('/dogs', json, (req, res) => {
   // Remove a pet from adoption.
-  Pets.dequeue(dogs)
+  Pets.dequeue('dog')
   return res 
     .status(204)
     .send('deleted')
